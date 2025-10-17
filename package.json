@@ -1,0 +1,19 @@
+{
+  "name": "cypress-cucumber-bank-transfer",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "http-server ./public -p 8080 -a 127.0.0.1",
+    "test:cypress:open": "cypress open",
+    "test:cypress:run": "cypress run --config baseUrl=http://127.0.0.1:8080",
+    "test": "start-server-and-test start http://127.0.0.1:8080 test:cypress:run"
+  },
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "13.0.0",
+    "@bahmutov/cypress-esbuild-preprocessor": "2.0.0",
+    "cypress": "10.11.0",
+    "esbuild": "0.17.19",
+    "http-server": "14.1.1",
+    "start-server-and-test": "1.14.0"
+  }
+}

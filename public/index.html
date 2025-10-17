@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Bank Transfer - Test App</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    label { display:block; margin-top:10px }
+    input[type="text"], input[type="number"], input[type="date"] { width:300px }
+    .hidden { display:none }
+  </style>
+</head>
+<body>
+  <h1>Bank Transfer</h1>
+  <form id="transferForm" data-testid="transfer-form" novalidate>
+    <label>Beneficiary Name
+      <input data-testid="beneficiary-name" type="text" name="beneficiary" />
+    </label>
+
+    <label>IBAN
+      <input data-testid="iban" type="text" name="iban" />
+    </label>
+
+    <label>Label
+      <input data-testid="label" type="text" name="label" />
+    </label>
+
+    <label>Amount
+      <input data-testid="amount" type="number" name="amount" step="0.01" />
+    </label>
+
+    <fieldset>
+      <legend>Transfer Mode</legend>
+      <label><input data-testid="mode-instant" type="radio" name="mode" value="instant" checked /> Instant</label>
+      <label><input data-testid="mode-scheduled" type="radio" name="mode" value="scheduled" /> Scheduled</label>
+    </fieldset>
+
+    <label id="dateLabel" data-testid="date-label" class="hidden">Transfer Date
+      <input data-testid="transfer-date" type="date" name="date" />
+    </label>
+
+    <button data-testid="submit" type="submit">Create Transfer</button>
+  </form>
+
+  <div id="message" data-testid="message" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

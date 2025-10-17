@@ -1,0 +1,5 @@
+{
+  "admin": { "role": "Administrator" },
+  "purchase_manager": { "role": "Purchase Manager" },
+  "guest": { "role": "Guest" }
+}

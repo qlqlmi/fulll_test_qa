@@ -1,0 +1,14 @@
+{
+  "validInstant": {
+    "beneficiary": "Alice GmbH",
+    "iban": "DE89370400440532013000",
+    "label": "Invoice 2025",
+    "amount": "100.00"
+  },
+  "validScheduled": {
+    "beneficiary": "fulll SAS",
+    "iban": "FR7630006000011234567890189",
+    "label": "Scheduled Payment",
+    "amount": "250.50"
+  }
+}
